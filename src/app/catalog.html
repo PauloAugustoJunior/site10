@@ -1,1 +1,50 @@
-<section class="section" id="solucoes" aria-labelledby="catalog-title"><div class="wrap"><div class="section-heading"><h2 id="catalog-title">A solução certa começa<br>pela necessidade certa.</h2><p>Da presença digital a um sistema completo, sete especialidades para resolver desafios reais. Explore as possibilidades e escolha por onde começar.</p></div><div class="catalog"><div class="catalog-menu" role="group" aria-label="Escolha uma especialidade">@for(service of services;track service.id){<button type="button" [attr.aria-pressed]="selected()===service.id" aria-controls="service-detail" (click)="select(service.id)"><span>{{ service.title }}</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>}</div><article id="service-detail" class="service-detail" aria-live="polite"><div class="detail-top"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="8" width="20" height="20" rx="3"/><rect x="36" y="36" width="20" height="20" rx="3"/><path d="M28 18h18v18M18 28v18h18"/></svg><span>{{ current().title }}</span></div><h3>{{ current().promise }}</h3><p>{{ current().description }}</p><ul>@for(item of current().deliverables;track item){<li>{{ item }}</li>}</ul><div class="example"><h4>Como isso pode ajudar</h4><p>{{ current().example }}</p><small>Exemplo ilustrativo, sem vínculo com clientes.</small></div><a class="button primary" href="#contato" (click)="interest.emit(current().id)">Planejar esta solução</a></article></div></div></section>
+<section class="section" id="solucoes" aria-labelledby="catalog-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <h2 id="catalog-title">A solução certa começa<br />pela necessidade certa.</h2>
+      <p>
+        Da presença digital a um sistema completo, sete especialidades para resolver desafios reais.
+        Explore as possibilidades e escolha por onde começar.
+      </p>
+    </div>
+    <div class="catalog">
+      <div class="catalog-menu" role="group" aria-label="Escolha uma especialidade">
+        @for (service of services; track service.id) {
+          <button
+            type="button"
+            [attr.aria-pressed]="selected() === service.id"
+            aria-controls="service-detail"
+            (click)="select(service.id)"
+          >
+            <span>{{ service.title }}</span
+            ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+          </button>
+        }
+      </div>
+      <article id="service-detail" class="service-detail" aria-live="polite">
+        <div class="detail-top">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="8" y="8" width="20" height="20" rx="3" />
+            <rect x="36" y="36" width="20" height="20" rx="3" />
+            <path d="M28 18h18v18M18 28v18h18" /></svg
+          ><span>{{ current().title }}</span>
+        </div>
+        <h3>{{ current().promise }}</h3>
+        <p>{{ current().description }}</p>
+        <ul>
+          @for (item of current().deliverables; track item) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+        <div class="example">
+          <h4>Como isso pode ajudar</h4>
+          <p>{{ current().example }}</p>
+          <small>Exemplo ilustrativo, sem vínculo com clientes.</small>
+        </div>
+        <a class="button primary" href="#contato" (click)="interest.emit(current().id)"
+          >Planejar esta solução</a
+        >
+      </article>
+    </div>
+  </div>
+</section>

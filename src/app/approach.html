@@ -1,5 +1,135 @@
-<section class="architecture section" aria-labelledby="architecture-title"><div class="wrap"><div class="architecture-intro"><h2 id="architecture-title">Uma entrega resolve o agora.<br>Boa arquitetura prepara o que vem.</h2><p>Um site pode se conectar a uma automação. Os dados desse processo podem alimentar um painel. Mais adiante, uma solução de IA pode apoiar o trabalho da equipe.</p></div><div class="connections" aria-label="Exemplo de evolução de soluções"><span>Presença digital</span><i aria-hidden="true"></i><span>Processos conectados</span><i aria-hidden="true"></i><span>Dados e inteligência</span></div><p class="architecture-note">Essa é uma possibilidade de evolução, não uma sequência obrigatória. Cada serviço pode ser contratado separadamente.</p></div></section>
-<section class="section" id="empresa" aria-labelledby="company-title"><div class="wrap company"><div><h2 id="company-title">Tecnologia com visão<br>de negócio.</h2><p>A Nexo é uma empresa brasileira de soluções tecnológicas. Combinamos desenvolvimento de software, dados, automação e inteligência artificial para construir respostas a necessidades concretas.</p></div><div class="company-principles"><article><h3>O contexto vem primeiro</h3><p>Pequenas e médias empresas e profissionais liberais têm realidades diferentes. A solução parte de como você trabalha.</p></article><article><h3>Conexões com propósito</h3><p>Escolhemos integrações e recursos pelo que acrescentam à sua operação, com escopo e responsabilidades definidos.</p></article><article><h3>Proximidade, de onde estiver</h3><p>Atendimento remoto em todo o Brasil, com alinhamentos claros para planejar, construir e evoluir.</p></article></div></div></section>
-<section class="section method" id="metodo" aria-labelledby="method-title"><div class="wrap"><div class="section-heading"><h2 id="method-title">Organização em cada etapa.</h2><p>Um processo compartilhado ajuda a transformar uma boa ideia em uma entrega que sua empresa consegue usar.</p></div><ol class="steps">@for(step of steps;track step.title;let index=$index){<li><span>{{ index+1 }}</span><h3>{{ step.title }}</h3><p>{{ step.text }}</p></li>}</ol></div></section>
-<section class="section" aria-labelledby="applications-title"><div class="wrap applications"><div><h2 id="applications-title">Conexões que fazem<br>sentido na prática.</h2><p>Exemplos de aplicações possíveis. O desenho de cada projeto depende dos seus processos e das ferramentas disponíveis.</p></div><div><details><summary>Um pedido que encontra seu caminho</summary><p>Um site recebe uma solicitação. Uma integração organiza os dados no sistema. Uma automação avisa o responsável. Sua equipe acompanha o contexto sem redigitar a mesma informação.</p></details><details><summary>Informação que apoia uma decisão</summary><p>Fontes de dados são preparadas e organizadas. Um dashboard oferece uma visão do negócio. Quando houver dados e contexto adequados, análises preditivas podem ampliar a investigação.</p></details><p class="illustrative">Cenários ilustrativos, sem promessa de resultado ou vínculo com clientes.</p></div></div></section>
-<section class="section faq" aria-labelledby="faq-title"><div class="wrap faq-layout"><h2 id="faq-title">Antes de começar.</h2><div><details><summary>Preciso contratar todas as soluções?</summary><p>Não. Podemos começar por uma necessidade pontual. A conexão com outras soluções é uma possibilidade de evolução, conforme suas prioridades.</p></details><details><summary>Vocês atendem meu segmento?</summary><p>A Nexo atende empresas e profissionais de diferentes segmentos. Avaliamos o contexto e o escopo de cada projeto, sem um nicho exclusivo.</p></details><details><summary>Como são definidos prazo e investimento?</summary><p>Dependem do escopo, das integrações e das necessidades do projeto. O briefing ajuda a organizar as informações para elaborar uma proposta.</p></details></div></div></section>
+<section class="architecture section" aria-labelledby="architecture-title">
+  <div class="wrap">
+    <div class="architecture-intro">
+      <h2 id="architecture-title">
+        Uma entrega resolve o agora.<br />Boa arquitetura prepara o que vem.
+      </h2>
+      <p>
+        Um site pode se conectar a uma automação. Os dados desse processo podem alimentar um painel.
+        Mais adiante, uma solução de IA pode apoiar o trabalho da equipe.
+      </p>
+    </div>
+    <div class="connections" aria-label="Exemplo de evolução de soluções">
+      <span>Presença digital</span><i aria-hidden="true"></i><span>Processos conectados</span
+      ><i aria-hidden="true"></i><span>Dados e inteligência</span>
+    </div>
+    <p class="architecture-note">
+      Essa é uma possibilidade de evolução, não uma sequência obrigatória. Cada serviço pode ser
+      contratado separadamente.
+    </p>
+  </div>
+</section>
+<section class="section" id="empresa" aria-labelledby="company-title">
+  <div class="wrap company">
+    <div>
+      <h2 id="company-title">Tecnologia com visão<br />de negócio.</h2>
+      <p>
+        A Nexo é uma empresa brasileira de soluções tecnológicas. Combinamos desenvolvimento de
+        software, dados, automação e inteligência artificial para construir respostas a necessidades
+        concretas.
+      </p>
+    </div>
+    <div class="company-principles">
+      <article>
+        <h3>O contexto vem primeiro</h3>
+        <p>
+          Pequenas e médias empresas e profissionais liberais têm realidades diferentes. A solução
+          parte de como você trabalha.
+        </p>
+      </article>
+      <article>
+        <h3>Conexões com propósito</h3>
+        <p>
+          Escolhemos integrações e recursos pelo que acrescentam à sua operação, com escopo e
+          responsabilidades definidos.
+        </p>
+      </article>
+      <article>
+        <h3>Proximidade, de onde estiver</h3>
+        <p>
+          Atendimento remoto em todo o Brasil, com alinhamentos claros para planejar, construir e
+          evoluir.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section method" id="metodo" aria-labelledby="method-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <h2 id="method-title">Organização em cada etapa.</h2>
+      <p>
+        Um processo compartilhado ajuda a transformar uma boa ideia em uma entrega que sua empresa
+        consegue usar.
+      </p>
+    </div>
+    <ol class="steps">
+      @for (step of steps; track step.title; let index = $index) {
+        <li>
+          <span>{{ index + 1 }}</span>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.text }}</p>
+        </li>
+      }
+    </ol>
+  </div>
+</section>
+<section class="section" aria-labelledby="applications-title">
+  <div class="wrap applications">
+    <div>
+      <h2 id="applications-title">Conexões que fazem<br />sentido na prática.</h2>
+      <p>
+        Exemplos de aplicações possíveis. O desenho de cada projeto depende dos seus processos e das
+        ferramentas disponíveis.
+      </p>
+    </div>
+    <div>
+      <details>
+        <summary>Um pedido que encontra seu caminho</summary>
+        <p>
+          Um site recebe uma solicitação. Uma integração organiza os dados no sistema. Uma automação
+          avisa o responsável. Sua equipe acompanha o contexto sem redigitar a mesma informação.
+        </p>
+      </details>
+      <details>
+        <summary>Informação que apoia uma decisão</summary>
+        <p>
+          Fontes de dados são preparadas e organizadas. Um dashboard oferece uma visão do negócio.
+          Quando houver dados e contexto adequados, análises preditivas podem ampliar a
+          investigação.
+        </p>
+      </details>
+      <p class="illustrative">
+        Cenários ilustrativos, sem promessa de resultado ou vínculo com clientes.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="section faq" aria-labelledby="faq-title">
+  <div class="wrap faq-layout">
+    <h2 id="faq-title">Antes de começar.</h2>
+    <div>
+      <details>
+        <summary>Preciso contratar todas as soluções?</summary>
+        <p>
+          Não. Podemos começar por uma necessidade pontual. A conexão com outras soluções é uma
+          possibilidade de evolução, conforme suas prioridades.
+        </p>
+      </details>
+      <details>
+        <summary>Vocês atendem meu segmento?</summary>
+        <p>
+          A Nexo atende empresas e profissionais de diferentes segmentos. Avaliamos o contexto e o
+          escopo de cada projeto, sem um nicho exclusivo.
+        </p>
+      </details>
+      <details>
+        <summary>Como são definidos prazo e investimento?</summary>
+        <p>
+          Dependem do escopo, das integrações e das necessidades do projeto. O briefing ajuda a
+          organizar as informações para elaborar uma proposta.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>

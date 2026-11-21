@@ -1,7 +1,12 @@
 import { Component, ElementRef, input, signal, viewChild } from '@angular/core';
-export interface NavigationLink { readonly label: string; readonly href: string; }
+export interface NavigationLink {
+  readonly label: string;
+  readonly href: string;
+}
 @Component({
-  selector: 'nexo-header', templateUrl: './header.html', styleUrl: './header.scss',
+  selector: 'nexo-header',
+  templateUrl: './header.html',
+  styleUrl: './header.scss',
   host: { '(document:keydown.escape)': 'close(true)' },
 })
 export class Header {

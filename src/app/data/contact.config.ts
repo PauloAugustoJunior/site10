@@ -7,5 +7,9 @@ export interface ContactConfiguration {
 }
 /** Preencher apenas com canais oficiais confirmados. O briefing nunca realiza envio. */
 export const CONTACT_CONFIG: ContactConfiguration = {
-  status: 'pending', email: null, phone: null, whatsappUrl: null, address: null,
+  status: 'pending',
+  email: null,
+  phone: null,
+  whatsappUrl: null,
+  address: null,
 };
