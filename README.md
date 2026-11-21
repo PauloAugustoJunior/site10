@@ -1,59 +1,41 @@
-# Site10
+# Nexo — Catálogo corporativo de capacidades
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.4.
+Site institucional independente em Angular 22.3.0, TypeScript 6.0.3 e SCSS. Hero editorial acompanhado por um índice em três frentes; catálogo com navegação lateral; faixa de arquitetura conectada; apresentação institucional; método em quatro passos; cenários ilustrativos expansíveis; FAQ e briefing local.
 
-## Development server
+## Executar
 
-To start a local development server, run:
+Node compatível: `^22.22.3`, `^24.15.0` ou `>=26`. A preparação foi validada com Node 24.22.3 e npm 12.0.2; `.nvmrc` registra a versão. Neste ambiente, o runtime está em `/home/codex/.local/bin`.
 
-```bash
-ng serve
+```sh
+npm ci
+npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Abrir `http://localhost:4210`.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```sh
+npm run build -- --configuration production
+npm test -- --watch=false
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Saída de produção: `dist/site10/browser`. Não há SSR nem lint configurado. Nenhuma dependência adicional foi instalada na aplicação.
 
-```bash
-ng generate --help
-```
+## Organização
 
-## Building
+- `src/app/home.*`: composição e conexão entre seções.
+- `src/app/data/services.ts`: portfólio tipado.
+- `src/app/data/contact.config.ts`: canais oficiais, todos pendentes/null.
+- `src/app/ui/header.*`: menu, âncoras e Escape com retorno de foco.
+- `src/app/ui/briefing.*`: validação, geração, cópia e download local.
+- `src/styles.scss`: tokens, tipografia e acessibilidade.
+- `public/fonts`: Public Sans e licença OFL; sem recursos essenciais externos.
 
-To build the project run:
+O briefing não envia informações nem as armazena em servidor/localStorage. Copiar e baixar só usam a versão atual dos campos. Preencher os canais oficiais e um eventual domínio é trabalho futuro; nenhum destino foi inventado.
 
-```bash
-ng build
-```
+## Referência e validação
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Referência: [https://coplan.srv.br/](https://coplan.srv.br/). Observações e decisões em `DESIGN.md`. Textos, componentes e SVGs são autorais, com serviços e público da Nexo.
 
-## Running unit tests
+A produção e os 9 testes passaram. Os testes cobrem navegação, destinos das âncoras, seleção de capacidades, integração com briefing, campos inválidos, documento local, invalidação após edição e falha de cópia. O coordenador também verificou, sem screenshots, menu/teclado, conteúdo expansível e axe nos estados desktop, mobile, menu aberto e conteúdo aberto. O resultado consolidado e os logs ficam em `../validacao-sites7-13/`.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Cada pasta mantém seu próprio histórico Git. O workflow `.github/workflows/pages.yml` já existia antes desta missão e foi preservado; nenhuma publicação foi configurada ou executada aqui.
